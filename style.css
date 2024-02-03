@@ -1,0 +1,408 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 400px;
+    min-height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kalam', cursive;
+}
+
+main{
+    position: absolute;
+      /* top: 5%;
+      left: 10%;
+      right: 10%;
+      bottom: 5%;  */
+      width:101%;
+     min-width: 400px;
+      height: 100%;
+      background-color:rgb(252, 231, 231);
+      color: maroon;
+      padding: 2rem 0;
+      text-align: center;
+      z-index: -1;
+      box-shadow:0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+}
+
+main .content{
+    margin-top: 3rem;
+    overflow-y: auto;
+}
+
+
+main .content::-webkit-scrollbar{
+    display: none;
+}
+
+.names{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+h2{
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 2.5rem;
+}
+
+h3{
+    margin: 1rem;
+    font-size: .9rem;
+    font-weight: 200;
+    margin-top: 2.5rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 1rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+}
+
+.events{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.event1 p, .event2 p, .wedding p{
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.ganesh{
+    margin: 0 auto;
+    background: url(/images/ganesh.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 1rem;
+}
+
+.ganesh img{
+    width: 100%;   
+}
+
+.flower{
+    position: absolute;
+    top:0%;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url(../images/flower.png);
+    background-size: 350px;
+    animation: swing ease-in-out 4s infinite;
+    transform-origin: center -20px;
+    /* animation: flower 1s linear infinite; */
+    z-index: 1;
+}
+
+@keyframes swing {
+    0%, 100%{
+        transform: rotate3d(0, 0, 0.3, 0.3deg);
+        background-position: 0px center;
+    }
+    25%{
+        transform: rotate3d(0, 0, 0.3, -0.3deg);
+        background-position: 10px center;
+    }
+    60%{
+        transform: rotate3d(0, 0, 0.3, 1deg);
+        background-position: 0px center;
+    }
+    80%{
+        transform: rotate3d(0, 0, 0.3, -0.3deg);
+        background-position: 10px center;
+    }
+    
+}
+
+@keyframes flower {
+
+    0%{
+        background-position: 0 center;
+    }
+    50%{
+        background-position: 30px center;
+    }
+    100%{
+        background-position: 0 center;
+    }
+    /* from{
+        background-position: 0 center;
+    }to{
+        background-position: 460px center;
+    } */
+}
+
+
+.background{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.images .img-1, 
+.images .img-21,
+.images .img-22,
+.images .img-3,
+.images .img-4,
+.images .img-5,
+.images .img-6,
+.images .img-7
+.images .img-8,
+.images .img-91,
+.images .img-92,
+.images .img-93,
+.images .img-94,
+.images .img-95,
+.images .img-96,
+.images .img-97,
+.images .img-98,
+.images .img-99,
+.images .img-90
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.images .img-1{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(239, 171, 180, 0.5));
+    background-position: center;
+    background-size: contain;
+}
+
+
+.images .img-21{
+    background: url(images/left.png);
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: contain;
+  background-position: left;
+  -webkit-animation:shake 5s ease-in-out infinite;
+}
+
+
+.images .img-22{
+    background: url(images/right.png);
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: contain;
+  background-position: right;
+  -webkit-animation:shake 5s ease-in-out infinite;
+}
+
+
+@keyframes shake {
+    0%, 100%{
+        transform: rotate3d(0, 1, 0, 6deg);
+    }
+    25%{
+        transform: rotate3d(0, 1, 0, -6deg);
+    }
+    60%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    80%{
+        transform: rotate3d(0, 1, 0, -6deg);
+    }
+}
+
+
+.images .img-3{
+    background: url(images/img-3.png);
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: contain;
+    background-position: center;
+}
+
+
+.images .img-4{
+    background: url(images/img-4.png);
+    background-position: center;
+    background-size: contain;
+    bottom: 0;
+    height: 55px;
+    width: 100%;
+    z-index: 3;
+}
+.images .img-5{
+    background: url(images/railing.png);
+    background-position: center;
+    background-size: contain;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.images .img-6{
+    background: url(images/water.png);
+    background-position: center;
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+.images .img-7{
+    background: url(images/leftpeacock.png);
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  z-index: 5;
+}
+
+.images .img-8{
+    background: url(images/rightpeacock.png);
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    z-index:7;
+}
+
+.images .img-91{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 10px;
+    margin-left: 350px;
+    bottom: 0;
+}
+
+.images .img-92{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    bottom: 0;
+}
+
+.images .img-93{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 15px;
+    margin-left: 200px;
+    bottom: 0;
+}
+
+.images .img-94{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index:9;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    bottom: 0;
+}
+
+.images .img-95{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 20px;
+    margin-left: 950px;
+    bottom: 0;
+}
+
+.images .img-96{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 5px;
+    margin-left: 600px;
+    bottom: 0;
+}
+
+.images .img-97{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 5px;
+    margin-left: 1000px;
+    bottom: 0;
+}
+
+.images .img-98{
+    background: url(images/lotus3.png);
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+    z-index:9;
+    margin-bottom: 10px;
+    margin-left: 1200px;
+    bottom: 0;
+}
+
+@media (max-width: 400px) {
+    .images .img-21 {
+        height: 200px;
+        animation: shake 5s ease-in-out infinite;
+    }
+
+    .images .img-22 {
+        height: 200px;
+        animation: shake 5s ease-in-out infinite;
+    }
